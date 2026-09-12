@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EduCare AI - Your AI-powered learning companion">
+    <title>EduCare AI | Dream. Learn. Achieve.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background decorations -->
+    <div class="dream-cloud cloud-1"></div>
+    <div class="dream-cloud cloud-2"></div>
+    <div class="dream-star star-1">✦</div>
+    <div class="dream-star star-2">✧</div>
+    <div class="dream-star star-3">✦</div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <a href="#home" class="logo">
+            <span class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+            <span>EduCare <b>AI</b></span>
+        </a>
+
+        <nav id="navMenu">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#learning" class="nav-link">AI Learning</a>
+            <a href="#resources" class="nav-link">Resources</a>
+            <a href="#about" class="nav-link">About</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="theme-btn" id="themeToggle" title="Change theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button class="btn btn-outline" onclick="openAuth('signin')">
+                Sign In
+            </button>
+
+            <button class="btn btn-primary" onclick="openAuth('signup')">
+                Sign Up
+            </button>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- ================= HOME ================= -->
+        <section id="home" class="hero section">
+
+            <div class="hero-content">
+
+                <div class="badge">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    AI-powered learning for dreamers
+                </div>
+
+                <h1>
+                    Dream.
+                    <span>Learn.</span>
+                    Achieve.
+                </h1>
+
+                <p>
+                    Your intelligent learning companion that turns
+                    confusing topics into simple ideas, creates
+                    personalized study plans, and helps you learn
+                    at your own pace.
+                </p>
+
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" onclick="openAuth('signup')">
+                        Get Started <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <a href="#learning" class="btn btn-glass btn-large">
+                        Explore Features
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <strong>10K+</strong>
+                        <span>Students</span>
+                    </div>
+
+                    <div>
+                        <strong>50K+</strong>
+                        <span>Questions Solved</span>
+                    </div>
+
+                    <div>
+                        <strong>95%</strong>
+                        <span>Learning Success</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Hero visual -->
+            <div class="hero-visual">
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="ai-card">
+
+                    <div class="ai-card-top">
+                        <div class="avatar">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+
+                        <div>
+                            <small>EduCare AI</small>
+                            <strong>Your Study Buddy</strong>
+                        </div>
+
+                        <span class="online-dot"></span>
+                    </div>
+
+                    <div class="ai-message">
+                        <span class="message-icon">✨</span>
+                        <p>
+                            Hi! Ready to turn your learning goals
+                            into achievements today?
+                        </p>
+                    </div>
+
+                    <div class="mini-progress">
+                        <div class="progress-header">
+                            <span>Today's Progress</span>
+                            <b>72%</b>
+                        </div>
+
+                        <div class="progress-bar">
+                            <span style="width:72%"></span>
+                        </div>
+                    </div>
+
+                    <div class="ai-actions">
+                        <button onclick="demoAI('Explain Photosynthesis')">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            Explain
+                        </button>
+
+                        <button onclick="demoAI('Create a Quiz')">
+                            <i class="fa-solid fa-circle-question"></i>
+                            Quiz
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="floating-book">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+
+                <div class="floating-bulb">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= FEATURES ================= -->
+        <section class="section" id="features">
+
+            <div class="section-heading">
+                <span class="section-label">POWERFUL FEATURES</span>
+
+                <h2>
+                    Everything you need to
+                    <span>learn better.</span>
+                </h2>
+
+                <p>
+                    One beautiful platform for your entire learning journey.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <div class="feature-icon purple">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3>AI Study Assistant</h3>
+                    <p>
+                        Ask questions and get simple,
+                        personalized explanations instantly.
+                    </p>
+                    <a href="#learning">Try AI <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon blue">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                    <h3>Smart Resources</h3>
+                    <p>
+                        Discover notes, quizzes, flashcards
+                        and useful learning resources.
+                    </p>
+                    <a href="#resources">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon pink">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3>Track Progress</h3>
+                    <p>
+                        See your progress and understand
+                        where you can improve.
+                    </p>
+                    <a href="#learning">View Progress <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon orange">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <h3>Study Planner</h3>
+                    <p>
+                        Build personalized study routines
+                        based on your goals.
+                    </p>
+                    <a href="#learning">Build Plan <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+        <section class="section how-section">
+
+            <div class="section-heading">
+                <span class="section-label">HOW IT WORKS</span>
+                <h2>Learning made <span>effortless.</span></h2>
+            </div>
+
+            <div class="steps">
+
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </div>
+                    <h3>Create your profile</h3>
+                    <p>Tell EduCare AI about your learning goals.</p>
+                </div>
+
+                <div class="step-line"></div>
+
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3>Learn with AI</h3>
+                    <p>Ask questions, create notes and practice.</p>
+                </div>
+
+                <div class="step-line"></div>
+
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <h3>Achieve your goals</h3>
+                    <p>Track your growth and become a better learner.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= AI LEARNING ================= -->
+        <section id="learning" class="section learning-section">
+
+            <div class="section-heading">
+                <span class="section-label">AI LEARNING LAB</span>
+
+                <h2>
+                    Meet your
+                    <span>AI Study Buddy.</span>
+                </h2>
+
+                <p>
+                    Explore AI-powered tools designed to make
+                    studying faster and easier.
+                </p>
+            </div>
+
+            <div class="learning-dashboard">
+
+                <div class="assistant-panel">
+
+                    <div class="assistant-header">
+                        <div class="assistant-avatar">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+
+                        <div>
+                            <h3>EduCare Assistant</h3>
+                            <p><span class="status-dot"></span> Online</p>
+                        </div>
+                    </div>
+
+                    <div class="chat-area" id="chatArea">
+
+                        <div class="chat-message ai">
+                            <div class="chat-avatar">🤖</div>
+                            <div>
+                                <p>
+                                    Hello! I'm your AI Study Buddy.
+                                    What would you like to learn today?
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="question-input">
+                        <input
+                            type="text"
+                            id="questionInput"
+                            placeholder="Ask me anything..."
+                            onkeydown="if(event.key==='Enter') askAI()"
+                        >
+
+                        <button onclick="askAI()">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <div class="tools-panel">
+
+                    <h3>Learning Tools</h3>
+                    <p class="panel-subtitle">
+                        Choose a tool to boost your learning.
+                    </p>
+
+                    <div class="tool-grid">
+
+                        <button class="tool-card" onclick="demoAI('Explain a topic')">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <strong>Explain Topic</strong>
+                            <span>Understand anything</span>
+                        </button>
+
+                        <button class="tool-card" onclick="demoAI('Generate notes')">
+                            <i class="fa-solid fa-file-lines"></i>
+                            <strong>Generate Notes</strong>
+                            <span>Quick study notes</span>
+                        </button>
+
+                        <button class="tool-card" onclick="demoAI('Generate quiz')">
+                            <i class="fa-solid fa-circle-question"></i>
+                            <strong>Generate Quiz</strong>
+                            <span>Test your knowledge</span>
+                        </button>
+
+                        <button class="tool-card" onclick="demoAI('Create flashcards')">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <strong>Flashcards</strong>
+                            <span>Remember faster</span>
+                        </button>
+
+                    </div>
+
+                    <div class="progress-card">
+
+                        <div class="progress-title">
+                            <div>
+                                <span>This week's goal</span>
+                                <strong>14 / 20 hours</strong>
+                            </div>
+
+                            <i class="fa-solid fa-fire"></i>
+                        </div>
+
+                        <div class="progress-bar large">
+                            <span style="width:70%"></span>
+                        </div>
+
+                        <small>6 hours remaining to reach your goal</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESOURCES ================= -->
+        <section id="resources" class="section">
+
+            <div class="section-heading">
+                <span class="section-label">RESOURCE LIBRARY</span>
+
+                <h2>
+                    Learn something
+                    <span>new today.</span>
+                </h2>
+
+                <p>
+                    Explore curated resources for your studies.
+                </p>
+            </div>
+
+            <div class="resource-controls">
+
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input
+                        type="text"
+                        id="resourceSearch"
+                        placeholder="Search resources..."
+                    >
+                </div>
+
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="science">Science</button>
+                    <button class="filter-btn" data-filter="math">Math</button>
+                    <button class="filter-btn" data-filter="technology">Technology</button>
+                </div>
+
+            </div>
+
+            <div class="resource-grid" id="resourceGrid">
+
+                <article class="resource-card" data-category="science">
+                    <div class="resource-image science-bg">
+                        <i class="fa-solid fa-atom"></i>
+                        <span>SCIENCE</span>
+                    </div>
+
+                    <div class="resource-body">
+                        <div class="resource-type">📖 Notes</div>
+                        <h3>Understanding Photosynthesis</h3>
+                        <p>Learn how plants convert light energy into food.</p>
+
+                        <div class="resource-footer">
+                            <span><i class="fa-regular fa-clock"></i> 10 min</span>
+                            <button class="bookmark-btn">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="resource-card" data-category="math">
+                    <div class="resource-image math-bg">
+                        <i class="fa-solid fa-square-root-variable"></i>
+                        <span>MATH</span>
+                    </div>
+
+                    <div class="resource-body">
+                        <div class="resource-type">🧠 Practice</div>
+                        <h3>Algebra Fundamentals</h3>
+                        <p>Master equations, variables and algebraic thinking.</p>
+
+                        <div class="resource-footer">
+                            <span><i class="fa-regular fa-clock"></i> 15 min</span>
+                            <button class="bookmark-btn">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="resource-card" data-category="technology">
+                    <div class="resource-image tech-bg">
+                        <i class="fa-solid fa-code"></i>
+                        <span>TECHNOLOGY</span>
+                    </div>
+
+                    <div class="resource-body">
+                        <div class="resource-type">💻 Tutorial</div>
+                        <h3>Introduction to AI</h3>
+                        <p>Discover the basics of artificial intelligence.</p>
+
+                        <div class="resource-footer">
+                            <span><i class="fa-regular fa-clock"></i> 20 min</span>
+                            <button class="bookmark-btn">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="resource-card" data-category="science">
+                    <div class="resource-image biology-bg">
+                        <i class="fa-solid fa-dna"></i>
+                        <span>BIOLOGY</span>
+                    </div>
+
+                    <div class="resource-body">
+                        <div class="resource-type">📝 Quiz</div>
+                        <h3>Human Biology Quiz</h3>
+                        <p>Challenge yourself with biology questions.</p>
+
+                        <div class="resource-footer">
+                            <span><i class="fa-regular fa-clock"></i> 8 min</span>
+                            <button class="bookmark-btn">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROGRESS ================= -->
+        <section class="section progress-section">
+
+            <div class="progress-wrapper">
+
+                <div>
+                    <span class="section-label">YOUR JOURNEY</span>
+
+                    <h2>
+                        Small steps.
+                        <span>Big dreams.</span>
+                    </h2>
+
+                    <p>
+                        Every question you answer and every concept
+                        you understand brings you closer to your goals.
+                    </p>
+
+                    <button class="btn btn-primary" onclick="showToast('Your progress is updated!')">
+                        View Full Progress
+                    </button>
+                </div>
+
+                <div class="journey-card">
+
+                    <div class="journey-top">
+                        <div>
+                            <small>Overall Progress</small>
+                            <strong>78%</strong>
+                        </div>
+
+                        <div class="trophy">
+                            🏆
+                        </div>
+                    </div>
+
+                    <div class="progress-bar large">
+                        <span style="width:78%"></span>
+                    </div>
+
+                    <div class="journey-stats">
+                        <div>
+                            <strong>42</strong>
+                            <span>Lessons</span>
+                        </div>
+
+                        <div>
+                            <strong>18</strong>
+                            <span>Quizzes</span>
+                        </div>
+
+                        <div>
+                            <strong>7</strong>
+                            <span>Badges</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+        <section id="about" class="section">
+
+            <div class="section-heading">
+                <span class="section-label">ABOUT EDUCARE AI</span>
+
+                <h2>
+                    We believe every
+                    <span>dream deserves a chance.</span>
+                </h2>
+
+                <p>
+                    EduCare AI combines education and technology
+                    to create a smarter, more personalized learning
+                    experience for students.
+                </p>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-card">
+                    <div class="about-icon">🌙</div>
+                    <h3>Our Vision</h3>
+                    <p>
+                        Make high-quality personalized learning
+                        accessible to every student.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-icon">🚀</div>
+                    <h3>Our Mission</h3>
+                    <p>
+                        Use AI to remove learning barriers and
+                        help students achieve their potential.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-icon">💡</div>
+                    <h3>Our Approach</h3>
+                    <p>
+                        Simple explanations, smart tools,
+                        personalized plans and continuous progress.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+        <section class="section contact-section">
+
+            <div class="contact-box">
+
+                <div class="contact-content">
+
+                    <span class="section-label">GET IN TOUCH</span>
+
+                    <h2>
+                        Have a question?
+                        <span>Let's talk.</span>
+                    </h2>
+
+                    <p>
+                        We'd love to hear your feedback and ideas
+                        for making EduCare AI better.
+                    </p>
+
+                    <div class="contact-info">
+                        <div>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>hello@educareai.demo</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>India</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <form id="contactForm">
+
+                    <input type="text" placeholder="Your name" required>
+
+                    <input type="email" placeholder="Your email" required>
+
+                    <textarea placeholder="Your message..." rows="5" required></textarea>
+
+                    <button type="submit" class="btn btn-primary">
+                        Send Message <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FLOATING PIZZA MENU ================= -->
+
+    <div class="pizza-menu">
+
+        <div class="pizza-options">
+
+            <button onclick="scrollToSection('home')" title="Home">
+                🏠
+            </button>
+
+            <button onclick="scrollToSection('learning')" title="AI Tutor">
+                🤖
+            </button>
+
+            <button onclick="scrollToSection('resources')" title="Resources">
+                📚
+            </button>
+
+            <button onclick="demoAI('Generate Quiz')" title="Quiz">
+                📝
+            </button>
+
+            <button onclick="scrollToSection('learning')" title="Progress">
+                📊
+            </button>
+
+            <button onclick="toggleTheme()" title="Settings">
+                ⚙️
+            </button>
+
+        </div>
+
+        <button class="pizza-button" id="pizzaButton">
+            🍕
+        </button>
+
+    </div>
+
+
+    <!-- ================= AUTH MODAL ================= -->
+
+    <div class="modal-overlay" id="authModal">
+
+        <div class="auth-modal">
+
+            <button class="close-modal" onclick="closeAuth()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="auth-logo">
+                <span><i class="fa-solid fa-graduation-cap"></i></span>
+                EduCare <b>AI</b>
+            </div>
+
+            <!-- Sign In -->
+            <div id="signinForm">
+
+                <h2>Welcome back 👋</h2>
+
+                <p class="auth-subtitle">
+                    Continue your learning journey.
+                </p>
+
+                <form onsubmit="signIn(event)">
+
+                    <label>Email</label>
+
+                    <div class="input-group">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="signinEmail" required placeholder="you@example.com">
+                    </div>
+
+                    <label>Password</label>
+
+                    <div class="input-group">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="signinPassword" required placeholder="••••••••">
+                    </div>
+
+                    <button class="btn btn-primary auth-submit" type="submit">
+                        Sign In
+                    </button>
+
+                </form>
+
+                <p class="auth-switch">
+                    Don't have an account?
+                    <button onclick="switchAuth('signup')">Create one</button>
+                </p>
+
+            </div>
+
+
+            <!-- Sign Up -->
+            <div id="signupForm" class="hidden">
+
+                <h2>Create your account ✨</h2>
+
+                <p class="auth-subtitle">
+                    Start your smarter learning journey.
+                </p>
+
+                <form onsubmit="signUp(event)">
+
+                    <label>Full Name</label>
+
+                    <div class="input-group">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="signupName" required placeholder="Your name">
+                    </div>
+
+                    <label>Email</label>
+
+                    <div class="input-group">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="signupEmail" required placeholder="you@example.com">
+                    </div>
+
+                    <label>Password</label>
+
+                    <div class="input-group">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="signupPassword" required minlength="6" placeholder="Minimum 6 characters">
+                    </div>
+
+                    <label>Confirm Password</label>
+
+                    <div class="input-group">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="signupConfirm" required placeholder="Repeat password">
+                    </div>
+
+                    <button class="btn btn-primary auth-submit" type="submit">
+                        Create Account
+                    </button>
+
+                </form>
+
+                <p class="auth-switch">
+                    Already have an account?
+                    <button onclick="switchAuth('signin')">Sign in</button>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMessage">Success!</span>
+    </div>
+
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+                    <span class="logo-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </span>
+
+                    <span>EduCare <b>AI</b></span>
+                </a>
+
+                <p>
+                    Dream. Learn. Achieve.
+                    <br>
+                    Your AI-powered learning companion.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#learning">AI Learning</a>
+                <a href="#resources">Resources</a>
+                <a href="#about">About</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 EduCare AI. Educational technology prototype.</span>
+            <span>Made with 💜 for learners.</span>
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
